@@ -1,7 +1,7 @@
 package com.teddy.springbootmall.service.impl;
 
-import com.teddy.springbootmall.constant.ProductCategory;
 import com.teddy.springbootmall.dao.ProductDao;
+import com.teddy.springbootmall.dto.ProductQueryParams;
 import com.teddy.springbootmall.dto.ProductRequest;
 import com.teddy.springbootmall.model.Product;
 import com.teddy.springbootmall.service.ProductService;
@@ -16,8 +16,8 @@ public class ProductServiceImpl implements ProductService {
     private ProductDao productDao;
 
     @Override
-    public List<Product> getProducts(ProductCategory category, String search) {
-        return productDao.getProducts(category, search);
+    public List<Product> getProducts(ProductQueryParams productQueryParams) {
+        return productDao.getProducts(productQueryParams);
     }
 
     @Override
